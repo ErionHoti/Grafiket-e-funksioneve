@@ -1,0 +1,1 @@
+# Grafiket-e-funksioneve
