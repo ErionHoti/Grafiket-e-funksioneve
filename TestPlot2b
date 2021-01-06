@@ -4,7 +4,7 @@ public class TestPlot2b
 {
 public static void main(String[] args)
 { PointGraphWriter e = new PointGraphWriter();
-e.setTitle("Graph of y = x*x + 2*x + 1");
+e.setTitle("Graph of y = 90 - (0.8x)^2");
 e.setAxes(50, 110, 90, "10", "100");
 // axes start at position 50,110; the axes have length 90 pixels
 // x-axis is labelled 0..10
