@@ -1,0 +1,20 @@
+import java.awt.*;
+import javax.swing.*;
+public class TestPlot2c
+{
+public static void main(String[] args)
+{ PointGraphWriter e = new PointGraphWriter();
+e.setTitle("Graph of y= 20x -(0.5x)^3");
+e.setAxes(50, 110, 90, "10", "100");
+// axes start at position 50,110; the axes have length 90 pixels
+// x-axis is labelled 0..10
+// y-axis is labelled 0..100
+double scale_factor = 90/100.;
+e.setPoint1((int)(20*0-Math.pow(0.5*0,3) * scale_factor)); 
+e.setPoint2((int)(20*2-Math.pow(0.5*2,3) * scale_factor)); 
+e.setPoint3((int)(20*4-Math.pow(0.5*4,3) * scale_factor)); 
+e.setPoint4((int)(20*6-Math.pow(0.5*6,3) * scale_factor)); 
+e.setPoint5((int)(20*8-Math.pow(0.5*8,3) * scale_factor)); 
+e.setPoint6((int)(20*10-Math.pow(0.5*10,3) * scale_factor));
+}
+}
