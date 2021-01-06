@@ -1,0 +1,20 @@
+import java.awt.*;
+import javax.swing.*;
+public class TestPlot4
+{
+public static void main(String[] args)
+{ PointGraphWriter e = new PointGraphWriter();
+e.setTitle("Graph of weekly temperatures");
+e.setAxes(50, 110, 90, "5", "40°");
+// axes start at position 50,110; the axes have length 90 pixels
+// Vlera e boshtit Ox prej 0..5 ku 0 dmth java e pare, 1 java e dyte,.......
+// y-axis is labelled 0..40
+double scale_factor = 90/40.;
+e.setPoint1((int)(19 * scale_factor)); //
+e.setPoint2((int)(21 * scale_factor)); // 
+e.setPoint3((int)( 20* scale_factor)); // 
+e.setPoint4((int)(24 * scale_factor)); // 
+e.setPoint5((int)(18 * scale_factor)); // 
+e.setPoint6((int)( 15* scale_factor)); //
+}
+}
