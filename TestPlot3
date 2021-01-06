@@ -1,0 +1,32 @@
+import java.awt.*;
+import javax.swing.*;
+public class TestPlot3
+{
+private static String Ox = JOptionPane.showInputDialog("Vlera maksimale e boshtit Ox=");
+private static String Oy = JOptionPane.showInputDialog("Vlera maksimale e boshtit Oy="); 
+private static String y1 = JOptionPane.showInputDialog("Vlera e y-it per piken e pare=");
+private static String y2 = JOptionPane.showInputDialog("Vlera e y-it per piken e dyte=");
+private static String y3 = JOptionPane.showInputDialog("Vlera e y-it per piken e trete=");
+private static String y4 = JOptionPane.showInputDialog("Vlera e y-it per piken e katert=");
+private static String y5 = JOptionPane.showInputDialog("Vlera e y-it per piken e peste=");
+private static String y6 = JOptionPane.showInputDialog("Vlera e y-it per piken e gjashte=");
+private static int Oy_length = new Integer(Oy);
+private static double scale_factor = 90.0/Oy_length;
+private static int vlera_y1 = new Integer(y1);
+private static int vlera_y2 = new Integer(y2);
+private static int vlera_y3 = new Integer(y3);
+private static int vlera_y4 = new Integer(y4);
+private static int vlera_y5 = new Integer(y5);
+private static int vlera_y6 = new Integer(y6);
+public static void main(String[] args)
+{ PointGraphWriter e = new PointGraphWriter();
+e.setTitle("Draw a graph");
+e.setAxes(50, 110, 90, Ox, Oy);
+e.setPoint1((int)(vlera_y1*scale_factor));
+e.setPoint2((int)(vlera_y2*scale_factor)); 
+e.setPoint3((int)(vlera_y3*scale_factor)); 
+e.setPoint4((int)(vlera_y4*scale_factor)); 
+e.setPoint5((int)(vlera_y5*scale_factor));
+e.setPoint6((int)(vlera_y6*scale_factor));
+}
+}
