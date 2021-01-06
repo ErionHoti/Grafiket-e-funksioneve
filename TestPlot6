@@ -1,0 +1,26 @@
+import java.awt.*;
+import javax.swing.*;
+public class TestPlot6
+{
+//në rreshtat e mëposhtëm deklarojmë variablat e nevojshme për vizatimin e grafikut
+private static String ShpejtsiaFillestare = JOptionPane.showInputDialog("Jepni vlera pozitive për shpejtësinë fillestare v0=");
+private static double v0 = new Double(ShpejtsiaFillestare);
+private static String Nxitimi = JOptionPane.showInputDialog("Jepni vlera pozitive per nxitimin a=");
+private static double a = new Double(Nxitimi);
+public static void main(String[] args)
+{ PointGraphWriter e = new PointGraphWriter();
+e.setTitle("Graph of distances travelled");
+e.setAxes(50, 110, 90, "10", "100");
+// Boshtet Ox,Oy fillojnë nga kordinata (50,110) me gjatësi 90 pixels
+// Boshti Ox merr vlera nga 0..10
+// Boshti Oy 0..100
+double scale_factor = 90/100.;
+// d= v0*t + (1/2)*a*t*t, ku t=0,2,4,...,10.
+e.setPoint1((int)((v0*0)+((1/2)*a*(Math.pow(0, 2))) * scale_factor));
+e.setPoint2((int)((v0*2)+((1/2)*a*(Math.pow(2, 2))) * scale_factor));
+e.setPoint3((int)((v0*4)+((1/2)*a*(Math.pow(4, 2)))* scale_factor));
+e.setPoint4((int)((v0*6)+((1/2)*a*(Math.pow(6, 2))) * scale_factor));
+e.setPoint5((int)((v0*8)+((1/2)*a*(Math.pow(8, 2))) * scale_factor));
+e.setPoint6((int)((v0*10)+((1/2)*a*(Math.pow(10, 2)))* scale_factor));
+}
+}
