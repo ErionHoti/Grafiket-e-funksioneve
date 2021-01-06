@@ -1,0 +1,81 @@
+import javax.swing.*; 
+import java.awt.*;
+public class PointGraphWriter extends JPanel {    
+JFrame korniza = new JFrame();
+private int x; 
+private int y;
+private int length;    
+private String Ox;    
+private String Oy;    
+private String emri;    
+private int y_height,y_height1,y_height2,y_height3,y_height4,y_height5;   
+private int x_width , x_width1 , x_width2,x_width3,x_width4,x_width5;
+private int width= 300;
+public PointGraphWriter()
+{              
+	korniza.setSize(width,width);       
+	korniza.setVisible(true);       
+	korniza.setTitle(emri);       
+	korniza.getContentPane().add(this);    
+}    
+public void paintComponent(Graphics g)    
+{   
+	g.setColor(Color.white);
+	g.fillRect(0,0,width,width);
+	g.setColor(Color.black);
+	g.drawLine(x,y,x+length,y);       
+	g.drawLine(x,y,x,y-length);       
+	g.drawString(Ox,x+length, y+15);       
+	g.drawString(Oy,x-15,y-length); 
+    g.drawString("0", x -15,y);       
+    g.drawString("0", x,y+15);       
+    //Pikat
+    g.fillOval(x+x_width-2,y-y_height-2, 4 ,4);
+    g.fillOval(x+x_width1-2,y-y_height1-2,4,4);
+    g.fillOval(x+x_width2-2,y-y_height2-2,4,4);
+    g.fillOval(x+x_width3-2,y-y_height3-2,4,4);
+    g.fillOval(x+x_width4-2,y-y_height4-2,4,4);
+    g.fillOval(x+x_width5-2,y-y_height5-2,4,4);
+    //Grafi
+    g.drawLine(x+x_width,y-y_height,x+x_width1,y-y_height1);
+    g.drawLine(x+x_width1,y-y_height1,x+x_width2,y-y_height2);
+    g.drawLine(x+x_width2,y-y_height2,x+x_width3,y-y_height3);		
+    g.drawLine(x+x_width3,y-y_height3,x+x_width4,y-y_height4);
+    g.drawLine(x+x_width4,y-y_height4,x+x_width5,y-y_height5);
+    } 
+public void setTitle(String emri) {
+	korniza.setTitle(emri); 
+}
+public void setAxes(int x1, int y1,int length1 , String Ox1, String Oy1){
+x= x1;
+y=y1;
+length = length1;
+Ox=Ox1;
+Oy=Oy1;
+}
+public void setPoint1(int height) {
+	x_width=0;
+    y_height=height;
+	}
+public void setPoint2(int height) {
+    x_width1= length/5;
+    y_height1= height;
+}
+public void setPoint3(int height) {
+	x_width2 = 2*length/5;
+    y_height2= height;
+}
+public void setPoint4(int height) {
+	x_width3 =3*length/5;
+    y_height3= height;
+}
+public void setPoint5(int height) {
+	x_width4 =4*length/5;
+    y_height4= height;
+}
+public void setPoint6(int height) {
+	x_width5 =5*length/5;
+    y_height5= height;	
+}
+}
+
