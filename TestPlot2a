@@ -1,0 +1,19 @@
+import java.awt.*;
+import javax.swing.*;
+public class TestPlot2a
+{
+public static void main(String[] args)
+{ PointGraphWriter e = new PointGraphWriter();
+e.setTitle("Graph of y = x*x + 2*x + 1");
+e.setAxes(50, 110, 90, "10", "100");
+// axes start at position 50,110; the axes have length 90 pixels
+// x-axis is labelled 0..10
+// y-axis is labelled 0..100
+double scale_factor = 90/100.;
+e.setPoint1((int)(((0*0)+(2*0)+1) * scale_factor)); 
+e.setPoint2((int)(((2*2)+(2*2)+1) * scale_factor)); 
+e.setPoint3((int)(((4*4)+(2*4)+1) * scale_factor)); 
+e.setPoint4((int)(((6*6)+(2*6)+1) * scale_factor)); 
+e.setPoint5((int)(((8*8)+(2*8)+1) * scale_factor));
+e.setPoint6((int)(((10*10)+(2*10)+1) * scale_factor));
+}
