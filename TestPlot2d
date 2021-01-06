@@ -1,0 +1,20 @@
+import java.awt.*;
+import javax.swing.*;
+public class TestPlot2d
+{
+public static void main(String[] args)
+{ PointGraphWriter e = new PointGraphWriter();
+e.setTitle("Graph of y = 0.1(x^3) + x^2 - x");
+e.setAxes(50, 110, 90, "10", "100");
+// axes start at position 50,110; the axes have length 90 pixels
+// x-axis is labelled 0..10
+// y-axis is labelled 0..100
+double scale_factor = 90/100.;
+e.setPoint1((int)((0.1*Math.pow(0,3)+Math.pow(0,2)-0) * scale_factor)); 
+e.setPoint2((int)((0.1*Math.pow(2,3)+Math.pow(2,2)-2) * scale_factor)); 
+e.setPoint3((int)((0.1*Math.pow(4,3)+Math.pow(4,2)-4) * scale_factor)); 
+e.setPoint4((int)((0.1*Math.pow(6,3)+Math.pow(6,2)-6) * scale_factor)); 
+e.setPoint5((int)((0.1*Math.pow(8,3)+Math.pow(8,2)-8) * scale_factor));
+e.setPoint6((int)((0.1*Math.pow(10,3)+Math.pow(10,2)-10) * scale_factor));
+}
+}
