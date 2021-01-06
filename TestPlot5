@@ -1,0 +1,20 @@
+import java.awt.*;
+import javax.swing.*;
+public class TestPlot5
+{
+public static void main(String[] args)
+{ PointGraphWriter e = new PointGraphWriter();
+e.setTitle("Graph of stock");
+e.setAxes(50, 110, 90, "5", "200");
+// axes start at position 50,110; the axes have length 90 pixels
+// Vlera e boshtit Ox prej 0..5 ku 0 dmth dita e pare, 1 dita e dyte,.......
+// y-axis is labelled 0..30
+double scale_factor = 90/200.;
+e.setPoint1((int)(138.89 * scale_factor)); // 
+e.setPoint2((int)(134.02 * scale_factor)); // 
+e.setPoint3((int)(136.14 * scale_factor)); // 
+e.setPoint4((int)(131.25 * scale_factor)); //
+e.setPoint5((int)(128.22 * scale_factor));
+e.setPoint6((int)(132.04 * scale_factor));
+}
+}
