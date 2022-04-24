@@ -1,2 +1,2 @@
-# Grafiket-e-funksioneve
-Shkruani një klasë, PointGraphWriter, që gjeneron një grafik me saktësisht 6 pika të vizatuara.
+# Graphs of functions
+Write a class, PointGraphWriter, that generates a graph with exactly 6 points drawn.
